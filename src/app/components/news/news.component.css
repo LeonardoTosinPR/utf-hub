@@ -1,0 +1,30 @@
+.news-section {
+    background-color: #3d82f6;
+    padding: 60px 0;
+  }
+  
+  .news-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .news-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .news-card-text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .custom-card {
+    min-height: 150px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    border-radius: 8px;
+  }
+  
