@@ -1,0 +1,43 @@
+<div class="subject-card">
+  <div class="left-section">
+    <div class="image-container">
+      <img [src]="mainImageUrl" [alt]="subjectTitle">
+      </div>
+  </div>
+  <div class="middle-section">
+    <h2 class="subject-title">{{ subjectTitle }}</h2>
+    <div class="approved-students">
+      <p>Media de alunos aprovados:</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar" [style.width]="approvedPercentage + '%'"></div>
+        <span>{{ approvedPercentage }} %</span>
+      </div>
+    </div>
+  </div>
+  <div class="right-section">
+    <div class="evaluation-method">
+      método avaliativo:
+      <ng-container *ngFor="let method of evaluationMethod; let i = index">
+        <span [class.highlight-green]="method.highlighted === 'prova' || method.highlighted === 'both'"
+              [class.highlight-blue]="method.highlighted === 'projeto' || method.highlighted === 'both'">
+          {{ method.type }}
+        </span>
+        <ng-container *ngIf="i < evaluationMethod.length - 1"> / </ng-container>
+      </ng-container>
+    </div>
+    <div class="academic-weight">
+      <p>Peso Acadêmico :</p>
+      <div class="stars">
+        <span *ngFor="let filled of starsArray" class="star" [class.filled]="filled" [class.empty]="!filled">
+          {{ filled ? '&#9733;' : '&#9734;' }}
+        </span>
+      </div>
+    </div>
+    <div class="action-buttons">
+      <button *ngFor="let iconPath of actionButtonIcons" class="icon-button">
+        <img [src]="iconPath" alt="Action Icon">
+      </button>
+      <button class="view-button">visualizar</button>
+    </div>
+  </div>
+</div>
