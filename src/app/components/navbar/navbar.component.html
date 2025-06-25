@@ -1,23 +1,30 @@
-<nav class="nav-extended">
-  <div class="nav-wrapper">
-    
-    <div class="left-side">
-      
-        <a href="#" class="logo">
-          <img src="assets/images/logoUTFPR.png" alt="Logo">
-        </a>
-     
-        <ul id="nav-mobile" class="nav-links hide-on-med-and-down">
-          <li><a routerLink="">Início</a></li>
-          <li><a routerLink="#">Curso</a></li>
-          <li><a routerLink="#">Sobre o projeto</a></li>
-          <li><a routerLink="https://www.utfpr.edu.br" target="_blank">Site da UTFPR</a></li>
-        </ul>
-    </div>
-
-    <div class="right-side">
-      <a routerLink="#" class="btn blue waves-effect waves-light">LOGIN</a>
-      <a routerLink="#" class="btn-flat blue-text waves-effect">REGISTRO</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/logoUTFPR.png" alt="Logo" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Curso</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre o projeto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.utfpr.edu.br" target="_blank">Site da UTFPR</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <button class="btn btn-warning me-2" type="button">LOGIN</button>
+        <button class="btn btn-outline-warning" type="button">REGISTRO</button>
+      </div>
     </div>
   </div>
 </nav>

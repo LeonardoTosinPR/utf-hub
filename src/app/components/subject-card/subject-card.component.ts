@@ -10,9 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 
 export class SubjectCardComponent implements OnInit {
-  // Nome da classe original
-  @Input() subjectTitle: string = 'Programação Orientada a Objetos'; // De volta ao nome original para o título padrão
-  @Input() approvedPercentage: number = 60; // Valor entre 0 e 100
+  @Input() subjectTitle: string = 'Programação Orientada a Objetos';
+  @Input() approvedPercentage: number = 60;
   @Input() evaluationMethod: {
     type: 'prova' | 'projeto';
     highlighted: 'prova' | 'projeto' | 'both';
@@ -22,8 +21,7 @@ export class SubjectCardComponent implements OnInit {
   ];
   @Input() importanceStars: number = 4;
 
-  @Input() mainImageUrl: string = 'assets/default-robot-image.png'; // Imagem principal (do robô, ou qualquer outra)
-  // O input 'techIcons' foi removido
+  @Input() mainImageUrl: string = 'assets/default-robot-image.png';
   @Input() actionButtonIcons: string[] = [
     'assets/default-document-icon.png',
     'assets/default-m-icon.png',

@@ -1,17 +1,15 @@
-<div class="section news-section white-text">
-    <div class="container">
-      <h5 class="left-align news-title">Últimas Notícias</h5>
-  
-      <div class="row no-margin">
-        <div class="col s12 m4 left-align" *ngFor="let noticia of [1,2,3]">
-          <div class="card custom-card blue lighten-5">
-            <div class="card-content white-text">
-              <span class="card-title news-card-title">Título da notícia</span>
-              <p class="news-card-text">Resumo da notícia ou descrição curta para chamar atenção do leitor.</p>
-            </div>
+<div class="news-section text-white py-5">
+  <div class="container">
+    <h5 class="text-start news-title mb-4">Últimas Notícias</h5>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let noticia of newsData">
+        <div class="card h-100 news-card">
+          <img [src]="noticia.imageUrl" class="card-img-top" alt="Imagem da notícia">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title news-card-title">{{ noticia.title }}</h6>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

@@ -6,7 +6,6 @@ import { FeatureCardsComponent } from './components/feature-cards/feature-cards.
 import { NewsComponent } from './components/news/news.component';
 import { SubjectCardComponent } from './components/subject-card/subject-card.component';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
