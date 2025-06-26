@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sobre',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './sobre.component.html',
-  styleUrl: './sobre.component.css'
+  styleUrls: ['./sobre.component.css']
 })
 export class SobreComponent {
 

@@ -4,7 +4,7 @@ nav {
 }
 
 .logo {
-  height: 120px;
+  height: 100px;
   width: auto;
 }
 
@@ -27,11 +27,12 @@ nav {
   transition: width 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
   color: #EEAD2D;
 }
 
-.navbar-nav .nav-link:hover::after {
+.navbar-nav .nav-link.active::after {
   width: 100%;
 }
 

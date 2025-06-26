@@ -49,16 +49,28 @@
   color: #333;
 }
 
-.content-area p, .content-area ul {
+.content-area p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #555;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.content-area ul {
-  list-style-position: inside;
-  padding-left: 0;
+.accordion-button:not(.collapsed) {
+  color: #333;
+  background-color: #f7e9d0;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: #f8ddac;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(238, 173, 45, 0.25);
+}
+
+.table {
+  margin-top: 1rem;
 }
 
 @media (max-width: 768px) {

@@ -1,21 +1,4 @@
 <app-navbar></app-navbar>
-
-<app-hero></app-hero>
-
-<div class="container my-5">
-  <app-feature-cards></app-feature-cards>
-</div>
-
-<div class="container section">
-  <app-subject-card
-  [subjectTitle]="'Desenvolvimento de Aplicações Front-End com Frameworks e Componentes'"
-  [approvedPercentage]="80"
-  [importanceStars]="4"
-  [mainImageUrl]="'../assets/images/materia_angular.png'"
-  [actionButtonIcons]="['assets/images/moodle.png', 'assets/images/discord.png']"
-  ></app-subject-card>
-</div>
-
-<app-news></app-news>
-
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+</main>
