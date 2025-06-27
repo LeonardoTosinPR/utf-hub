@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent {
+  @Input() title: string = 'Últimas Notícias';
+
   newsData = [
     {
       title: 'UTFPR Toledo sedia Pré-Conferência Municipal de Promoção da Igualdade Racial',

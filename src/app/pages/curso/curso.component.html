@@ -13,10 +13,10 @@
   <section class="content-area">
     <div class="row mb-4">
       <div class="col">
-        <h2>{{ courseInfo.name }}</h2>
+        <h2>{{ courseInfo.name | uppercase }}</h2>
         <hr>
         <p><strong>Câmpus:</strong> {{ courseInfo.campus }}</p>
-        <p><strong>Última Alteração na Matriz:</strong> {{ courseInfo.lastUpdate }}</p>
+        <p><strong>Última Alteração na Matriz:</strong> {{ courseInfo.lastUpdate | date: 'dd/MM/yyyy, HH:mm' }}</p>
         <a [href]="courseUrl" target="_blank" class="btn btn-warning">Mais Informações no Site da UTFPR</a>
       </div>
     </div>
