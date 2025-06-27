@@ -1,17 +1,39 @@
 <div class="form-container">
   <div class="form-wrapper shadow-sm">
     <h2 class="text-center mb-4">Login</h2>
-    <form>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+
+      <div class="alert alert-danger" *ngIf="loginError">
+        Email ou senha inválidos.
+      </div>
+
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="seuemail@exemplo.com"
+          [(ngModel)]="loginData.email"
+          required
+        >
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="password">
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          [(ngModel)]="loginData.senha"
+          required
+        >
       </div>
       <div class="d-grid">
-        <button type="submit" class="btn btn-warning">Entrar</button>
+        <button type="submit" class="btn btn-warning" [disabled]="loginForm.invalid">
+          Entrar
+        </button>
       </div>
     </form>
   </div>

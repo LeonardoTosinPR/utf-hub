@@ -57,3 +57,8 @@ nav {
     background-color: #EEAD2D;
     border-color: #EEAD2D;
 }
+
+.profile-icon i {
+  font-size: 1.8rem;
+  vertical-align: middle;
+}

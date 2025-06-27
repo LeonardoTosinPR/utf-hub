@@ -1,25 +1,82 @@
 <div class="form-container">
   <div class="form-wrapper shadow-sm">
     <h2 class="text-center mb-4">Criar Conta</h2>
-    <form>
+    <form #registroForm="ngForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
         <label for="name" class="form-label">Nome Completo</label>
-        <input type="text" class="form-control" id="name">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          [(ngModel)]="registroData.nome"
+          required
+          minlength="3"
+          #name="ngModel"
+        >
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger mt-1 small">
+          <div *ngIf="name.errors?.['required']">O nome é obrigatório.</div>
+          <div *ngIf="name.errors?.['minlength']">O nome deve ter no mínimo 3 caracteres.</div>
+        </div>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="seuemail@exemplo.com"
+          [(ngModel)]="registroData.email"
+          required
+          pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+          #email="ngModel"
+        >
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger mt-1 small">
+          <div *ngIf="email.errors?.['required']">O email é obrigatório.</div>
+          <div *ngIf="email.errors?.['pattern']">Por favor, insira um email válido.</div>
+        </div>
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="password">
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          [(ngModel)]="registroData.senha"
+          required
+          minlength="6"
+          #senha="ngModel"
+        >
+        <div *ngIf="senha.invalid && (senha.dirty || senha.touched)" class="text-danger mt-1 small">
+          <div *ngIf="senha.errors?.['required']">A senha é obrigatória.</div>
+          <div *ngIf="senha.errors?.['minlength']">A senha deve ter no mínimo 6 caracteres.</div>
+        </div>
       </div>
       <div class="mb-3">
         <label for="confirmPassword" class="form-label">Confirmar Senha</label>
-        <input type="password" class="form-control" id="confirmPassword">
+        <input
+          type="password"
+          class="form-control"
+          id="confirmPassword"
+          name="confirmPassword"
+          [(ngModel)]="registroData.confirmarSenha"
+          required
+          #confirmarSenha="ngModel"
+        >
+        <div *ngIf="confirmarSenha.touched && registroData.senha !== registroData.confirmarSenha" class="text-danger mt-1 small">
+          As senhas não conferem.
+        </div>
       </div>
       <div class="d-grid">
-        <button type="submit" class="btn btn-warning">Registrar</button>
+        <button
+          type="submit"
+          class="btn btn-warning"
+          [disabled]="registroForm.invalid || registroData.senha !== registroData.confirmarSenha"
+        >
+          Registrar
+        </button>
       </div>
     </form>
   </div>

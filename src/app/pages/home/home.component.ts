@@ -9,8 +9,8 @@ import { NewsComponent } from '../../components/news/news.component';
   standalone: true,
   imports: [CommonModule, HeroComponent, FeatureCardsComponent, NewsComponent],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent {
 
 }

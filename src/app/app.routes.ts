@@ -4,6 +4,7 @@ import { CursoComponent } from './pages/curso/curso.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,4 +13,5 @@ export const routes: Routes = [
   { path: 'sobre', component: SobreComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
+  { path: 'perfil', component: ProfileComponent },
 ];
