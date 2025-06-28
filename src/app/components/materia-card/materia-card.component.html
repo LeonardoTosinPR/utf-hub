@@ -1,0 +1,23 @@
+<div class="materia-card">
+  <img [src]="materia.imagem" alt="Imagem da matéria" class="materia-img">
+  <div class="materia-info">
+    <h5>{{ materia.nome }}</h5>
+    <div class="materia-meta">
+      <span>Média de alunos aprovados:</span>
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="materia.mediaAprovados"></div>
+        <span class="progress-label">{{ materia.mediaAprovados }} %</span>
+      </div>
+      <span>Importância:
+        <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+          <i class="bi" [ngClass]="i < materia.importancia ? 'bi-star-fill' : 'bi-star'"></i>
+        </ng-container>
+      </span>
+      <span class="avaliacao">método avaliativo: <span class="text-danger" *ngIf="materia.avaliacao.includes('prova')">prova</span> / <span class="text-success" *ngIf="materia.avaliacao.includes('projeto')">projeto</span></span>
+    </div>
+    <div class="materia-icons">
+      <img src="assets/images/moodle.png" alt="Moodle" class="icon">
+      <img src="assets/images/discord.png" alt="Discord" class="icon">
+    </div>
+  </div>
+</div>
