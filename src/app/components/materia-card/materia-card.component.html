@@ -8,7 +8,7 @@
         <div class="progress" [style.width.%]="materia.mediaAprovados"></div>
         <span class="progress-label">{{ materia.mediaAprovados }} %</span>
       </div>
-      <span>Importância:
+      <span>Peso academico:
         <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
           <i class="bi" [ngClass]="i < materia.importancia ? 'bi-star-fill' : 'bi-star'"></i>
         </ng-container>
