@@ -31,8 +31,8 @@ https://www.figma.com/proto/jCW7FJocGbD31wCPnUUo7j/Prototipo-de-Tela?node-id=13-
 #### RA5 - Criar interfaces de navegação intuitivas e responsivas, implementando roteamento em aplicações de página única (SPA).
 - [x] ID14: O aluno configurou rotas para diferentes partes da aplicação, permitindo a navegação entre páginas distintas.
 - [ ] ID15: O aluno demonstrou a habilidade de passar dados entre componentes que representam diferentes telas usando parâmetros de rotas, garantindo uma troca eficiente de informações.
-- [ ] ID16: O aluno criou uma estrutura de navegação aninhada para representar hierarquias de conteúdo.
-- [ ] ID17: O aluno aplicou guardas de rotas para controlar o acesso a rotas específicas da aplicação, assegurando que somente usuários autorizados possam acessar determinadas partes da interface.
+- [x] ID16: O aluno criou uma estrutura de navegação aninhada para representar hierarquias de conteúdo.
+- [x] ID17: O aluno aplicou guardas de rotas para controlar o acesso a rotas específicas da aplicação, assegurando que somente usuários autorizados possam acessar determinadas partes da interface.
 #### RA6 - Realizar requisições assíncronas para serviços web, compreendendo os protocolos e formatos de troca de dados, tratando respostas e erros.
 ~~- [ ] ID18: O aluno fez requisições assíncronas a uma API pública, compreendendo os protocolos HTTP e formatos de dados para no mínimo a operação GET.~~
 
@@ -54,13 +54,6 @@ https://www.figma.com/proto/jCW7FJocGbD31wCPnUUo7j/Prototipo-de-Tela?node-id=13-
 - Abrir um terminal pelo VSCode ou qualquer terminal do seu Sistema Operacional apontando para o diretório raiz do projeto 
 - Instalar as dependências contidas no `package.json`
   - Comando: `npm i`
-- (Opcional) Instalar o JSON Server globalmente disponível em `https://www.npmjs.com/package/json-server`
-  - Comando: `npm i -g json-server` 
-  - É opcional porque a dependência já vem cadastrada no arquivo `package.json` para instalação local na pasta `node_modules`
-- Executar a API Fake (JSON Server) via um dos seguintes comandos: 
-  - Execução via script registrado no `package.json`: `npm run json:server:routes` 
-  - Ou via Execução explícita: `json-server --watch db.json --routes routes.json`
-- O comando para execução do JSON Server deve ser aplicado no diretório raiz do projeto, ou seja, que contém o arquivo `db.json` e `routes.json`.
-  - Por padrão, a aplicação JSON Server executa no endereço `localhost:3000`    
 - Abrir um novo terminal pelo VSCode e então executar o projeto Angular
   - Comando: `ng s -o`
+  - O projeto vai iniciar (provavelmente) na porta 4200 caso não abra o projeto direto no navegador
