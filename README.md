@@ -2,6 +2,10 @@
 
 O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
+## Video de apresentação do projeto
+
+https://youtu.be/824cMjdzVp0 
+
 ## Endereço de Deploy - GitHub Pages
 
 https://github.com/LeonardoTosinPR/utf-hub. 
