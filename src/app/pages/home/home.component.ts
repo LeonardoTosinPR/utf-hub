@@ -12,5 +12,7 @@ import { NewsComponent } from '../../components/news/news.component';
 })
 
 export class HomeComponent {
-
+  onNewsArticleClicked(title: string): void {
+    alert(`Demonstração de @Output:\n\nVocê clicou na notícia: "${title}"`);
+  }
 }

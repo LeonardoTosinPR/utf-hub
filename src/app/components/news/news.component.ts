@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core'; 
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class NewsComponent {
   @Input() title: string = 'Últimas Notícias';
+  @Output() newsClicked = new EventEmitter<string>();
 
   newsData = [
     {
@@ -25,4 +26,8 @@ export class NewsComponent {
       imageUrl: 'https://www.plural.jor.br/content/images/size/w1200/2025/06/biometria-neonatal.png'
     }
   ];
+
+  onReadMore(newsTitle: string): void {
+    this.newsClicked.emit(newsTitle);
+  }
 }

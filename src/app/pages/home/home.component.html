@@ -4,4 +4,7 @@
   <app-feature-cards></app-feature-cards>
 </div>
 
-<app-news [title]="'Fique por Dentro das Novidades da UTFPR'"></app-news>
+<app-news
+  [title]="'Fique por Dentro das Novidades da UTFPR'"
+  (newsClicked)="onNewsArticleClicked($event)">
+</app-news>

@@ -7,6 +7,9 @@
           <img [src]="noticia.imageUrl" class="card-img-top" alt="Imagem da notícia">
           <div class="card-body d-flex flex-column">
             <h6 class="card-title news-card-title">{{ noticia.title }}</h6>
+            <button class="btn btn-light btn-sm mt-auto" (click)="onReadMore(noticia.title)">
+              Leia Mais
+            </button>
           </div>
         </div>
       </div>
