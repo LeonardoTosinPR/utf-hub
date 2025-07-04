@@ -1,0 +1,71 @@
+.materia-card {
+  display: flex;
+  align-items: center;
+  background: #868585;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+.materia-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.materia-info {
+  flex: 1;
+}
+.materia-meta {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.progress-bar {
+  background: #ccc;
+  border-radius: 6px;
+  height: 18px;
+  width: 220px;
+  margin: 0.3rem 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.progress {
+  background: #3b82f6;
+  height: 100%;
+  border-radius: 6px 0 0 6px;
+}
+.progress-label {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 18px;
+}
+
+.materia-icons {
+  margin-top: 0.7rem;
+  display: flex;
+  gap: 0.7rem;
+}
+.icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 0;
+  border-radius: 8px;           /* Borda arredondada */
+  background-color: #fffbe6;    /* Cor clara diferente do fundo */
+  padding: 4px;
+  box-shadow: 0 1px 4px #0001;
+  border: 1.5px solid #f6c343;  /* Borda dourada para destacar */
+  object-fit: contain;
+  transition: box-shadow 0.2s;
+}
+.icon:last-child {
+  background-color: #e6f0ff;    /* Cor diferente para o Discord */
+  border: 1.5px solid #7289da;  /* Borda azul Discord */
+}
+.avaliacao {
+  display: block;
+  margin-top: 0.3rem;
+}

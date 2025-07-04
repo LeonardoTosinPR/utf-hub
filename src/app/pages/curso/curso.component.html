@@ -1,0 +1,55 @@
+<div class="page-container">
+  <header class="page-header">
+    <div class="header-content">
+      <div class="text-block">
+        <h1>Matriz Curricular</h1>
+      </div>
+      <div class="image-block">
+        <img src="assets/images/banner-pages-curso.jpeg" alt="Banner da página de curso" class="banner-image">
+      </div>
+    </div>
+  </header>
+
+  <section class="content-area">
+    <div class="row mb-4">
+      <div class="col">
+        <h2>{{ courseInfo.name | uppercase }}</h2>
+        <hr>
+        <p><strong>Câmpus:</strong> {{ courseInfo.campus }}</p>
+        <p><strong>Última Alteração na Matriz:</strong> {{ courseInfo.lastUpdate | date: 'dd/MM/yyyy, HH:mm' }}</p>
+        <a [href]="courseUrl" target="_blank" class="btn btn-warning">Mais Informações no Site da UTFPR</a>
+      </div>
+    </div>
+
+    <div class="accordion" id="accordionPeriods">
+      <div class="accordion-item" *ngFor="let period of periods; let i = index">
+        <h2 class="accordion-header" [id]="'heading' + i">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" [attr.aria-expanded]="i === 0 ? 'true' : 'false'" [attr.aria-controls]="'collapse' + i">
+            <strong>{{ period.name }}</strong>
+          </button>
+        </h2>
+        <div [id]="'collapse' + i" class="accordion-collapse collapse" [class.show]="i === 0" [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionPeriods">
+          <div class="accordion-body">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Disciplina</th>
+                  <th scope="col">Carga Horária</th>
+                  <th scope="col">Professor(es)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let subject of period.subjects">
+                  <td>{{ subject.name }} <small class="text-muted d-block">{{ subject.code }}</small></td>
+                  <td>{{ subject.workload }}h</td>
+                  <td>{{ subject.teachers }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>

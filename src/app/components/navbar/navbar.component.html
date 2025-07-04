@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/images/logoUTFPR.png" alt="Logo" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/inicio" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/curso" routerLinkActive="active">Curso</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/sobre" routerLinkActive="active">Sobre o projeto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/materias" routerLinkActive="active">Matérias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.utfpr.edu.br" target="_blank">Site da UTFPR</a>
+        </li>
+      </ul>
+
+      <div *ngIf="!isLoggedIn" class="d-flex">
+        <a routerLink="/login" class="btn btn-warning me-2">LOGIN</a>
+        <a routerLink="/registro" class="btn btn-outline-warning">REGISTRO</a>
+      </div>
+
+      <div *ngIf="isLoggedIn" class="d-flex align-items-center">
+        <a routerLink="/perfil" class="nav-link profile-icon me-3" title="Minha Conta">
+          <i class="bi bi-person-circle"></i>
+        </a>
+        <a href="#" (click)="logout($event)" class="nav-link">Sair</a>
+      </div>
+
+    </div>
+  </div>
+</nav>

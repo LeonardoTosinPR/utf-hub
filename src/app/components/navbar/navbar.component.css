@@ -1,0 +1,64 @@
+nav {
+  font-family: 'Quicksand', sans-serif;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  margin-right: 15px;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #EEAD2D;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #EEAD2D;
+}
+
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.btn-warning {
+  background-color: #EEAD2D;
+  border-color: #EEAD2D;
+  color: white;
+}
+
+.btn-warning:hover {
+    background-color: #dAA928;
+    border-color: #dAA928;
+}
+
+.btn-outline-warning {
+    color: #EEAD2D;
+    border-color: #EEAD2D;
+}
+
+.btn-outline-warning:hover {
+    color: white;
+    background-color: #EEAD2D;
+    border-color: #EEAD2D;
+}
+
+.profile-icon i {
+  font-size: 1.8rem;
+  vertical-align: middle;
+}

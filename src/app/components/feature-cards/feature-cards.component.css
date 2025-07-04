@@ -1,0 +1,22 @@
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #EEAD2D;
+}
+
+.icon-circle i {
+  font-size: 2.5rem;
+}
+
+.feature-text {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 90%;
+  margin: 0 auto;
+}

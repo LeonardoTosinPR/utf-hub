@@ -1,0 +1,28 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.form-wrapper {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.btn-warning {
+  background-color: #EEAD2D;
+  border-color: #EEAD2D;
+  color: white;
+  padding: 0.75rem;
+  font-weight: 600;
+}
+
+.btn-warning:hover {
+  background-color: #dAA928;
+  border-color: #dAA928;
+}
